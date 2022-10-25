@@ -29,13 +29,13 @@
 	{/if}
 
 	{* Journal Description *}
-	{if $activeTheme->getOption('showDescriptionInJournalIndex')}
-		<section class="homepage_about">
-			<a id="homepageAbout"></a>
-			<h2>{translate key="about.aboutContext"}</h2>
-			{$currentContext->getLocalizedData('description')}
-		</section>
-	{/if}
+{*	{if $activeTheme->getOption('showDescriptionInJournalIndex')}*}
+{*		<section class="homepage_about">*}
+{*			<a id="homepageAbout"></a>*}
+{*			<h2>{translate key="about.aboutContext"}</h2>*}
+{*			{$currentContext->getLocalizedData('description')}*}
+{*		</section>*}
+{*	{/if}*}
 
 	{* Announcements *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
@@ -71,17 +71,17 @@
 	{* Latest issue *}
 	{if $issue}
 		<section class="current_issue">
-			<a id="homepageIssue"></a>
-			<h2>
-				{translate key="journal.currentIssue"}
-			</h2>
-			<div class="current_issue_title">
-				{$issue->getIssueIdentification()|strip_unsafe_html}
-			</div>
-			{include file="frontend/objects/issue_toc.tpl" heading="h3"}
-			<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
-				{translate key="journal.viewAllIssues"}
-			</a>
+{*			<a id="homepageIssue"></a>*}
+{*			<h2>*}
+{*				{translate key="journal.currentIssue"}*}
+{*			</h2>*}
+{*			<div class="current_issue_title">*}
+{*				{$issue->getIssueIdentification()|strip_unsafe_html}*}
+{*			</div>*}
+			{include file="frontend/objects/issue_toc_main.tpl" heading="h3"}
+{*			<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">*}
+{*				{translate key="journal.viewAllIssues"}*}
+{*			</a>*}
 		</section>
 	{/if}
 
