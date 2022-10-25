@@ -102,20 +102,20 @@ a {
 	// Full-height borders wrapping primary content column
 	.pkp_structure_main {
 
-		&:before,
-		&:after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			width: 1px;
-			background: @bg-border-color;
-		}
-
-		&:after {
-			left: @screen-tablet-container;
-		}
+		//&:before,
+		//&:after {
+		//	content: '';
+		//	position: absolute;
+		//	top: 0;
+		//	left: 0;
+		//	bottom: 0;
+		//	width: 1px;
+		//	background: @bg-border-color;
+		//}
+		//
+		//&:after {
+		//	left: @screen-tablet-container;
+		//}
 	}
 }
 
@@ -123,6 +123,8 @@ a {
 
 	.pkp_structure_content {
 		padding-top: @triple;
+
+		background: #f5f5f5;
 	}
 
 	.pkp_structure_sidebar {
@@ -145,7 +147,12 @@ a {
 
 	.pkp_structure_main {
 		width: @screen-lg-desktop-container - @sidebar-width;
-
+		&:after {
+			left: @screen-lg-desktop-container - @sidebar-width;
+		}
+	}
+	.pkp_structure_main_main {
+		width: 100%;
 		&:after {
 			left: @screen-lg-desktop-container - @sidebar-width;
 		}

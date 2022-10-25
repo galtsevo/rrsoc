@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2022-10-25 13:43:55
+/* Smarty version 3.1.39, created on 2022-10-26 02:25:50
   from 'app:frontendcomponentsfooter.' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6357bdeb5df979_46737491',
+  'unifunc' => 'content_6358707ece7c40_41075264',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4dffb64063bb972c37e05619a2ccd9d0ea7473ac' => 
     array (
       0 => 'app:frontendcomponentsfooter.',
-      1 => 1664910729,
+      1 => 1666738500,
       2 => 'app',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6357bdeb5df979_46737491 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6358707ece7c40_41075264 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 	</div><!-- pkp_structure_main -->
 
@@ -51,13 +51,6 @@ $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);?>
 		<?php }?>
 
 		<div class="pkp_brand_footer" role="complementary">
-			<a href="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['url'][0], array( array('page'=>"about",'op'=>"aboutThisPublishingSystem"),$_smarty_tpl ) );?>
-">
-				<img alt="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['translate'][0], array( array('key'=>"about.aboutThisPublishingSystem"),$_smarty_tpl ) );?>
-" src="<?php echo $_smarty_tpl->tpl_vars['baseUrl']->value;?>
-/<?php echo $_smarty_tpl->tpl_vars['brandImage']->value;?>
-">
-			</a>
 		</div>
 	</div>
 </div><!-- pkp_structure_footer_wrapper -->

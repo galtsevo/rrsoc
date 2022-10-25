@@ -110,17 +110,17 @@
 	{* Articles *}
 	<div class="sections">
 	{foreach name=sections from=$publishedSubmissions item=section}
-		<div class="section">
+		<div class="section_main">
 		{if $section.articles}
 {*			{if $section.title}*}
 {*				<{$heading}>*}
 {*					{$section.title|escape}*}
 {*				</{$heading}>*}
 {*			{/if}*}
-			<ul class="cmp_article_list articles">
+			<ul class="cmp_article_list_main articles_main">
 				{foreach from=$section.articles item=article}
 					<li>
-						{include file="frontend/objects/article_summary.tpl" heading=$articleHeading}
+						{include file="frontend/objects/article_summary_main.tpl" heading=$articleHeading}
 					</li>
 				{/foreach}
 			</ul>

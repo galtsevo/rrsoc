@@ -14,7 +14,7 @@
 // Structural components of the header layout
 .pkp_structure_head {
 	background-color: @bg-base;
-	border-bottom: @bg-border;
+	//border-bottom: @bg-border;
 }
 
 .pkp_head_wrapper {
@@ -230,11 +230,15 @@
 		}
 	}
 
+	.bsu_logo {
+		//background-image: url(@{baseUrl}/plugins/themes/default/styles/images/bsu_logo.png);
+		//background-image: url(@{baseUrl}/lib/pkp/templates/images/structure/grid_promote.png);
+	}
 	// Site logo/nav on same line on larger screens
 	.has_site_logo .pkp_head_wrapper {
 		padding-top: @triple;
 		display: grid;
-		grid-template-columns: 25% 15% 1fr;
+		grid-template-columns: 25% 15% 1fr 15%;
 		width: 100%;
 	}
 	.has_site_logo .pkp_head_wrapper:before, .has_site_logo .pkp_head_wrapper:after {
@@ -248,7 +252,8 @@
 	.pkp_site_nav_menu{
 		margin-right: 30px;
 		align-self: center;
-		justify-content: end;
+		//justify-content: end;
+		justify-content: center;
 	}
 	.pkp_navigation_primary_wrapper{
 		width: unset;

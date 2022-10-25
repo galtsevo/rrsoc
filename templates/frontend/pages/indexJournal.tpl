@@ -16,7 +16,9 @@
  *       homepage
  * @uses $issue Issue Current issue
  *}
-{include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
+{include file="frontend/components/header_main.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
+
+<img src="{$baseUrl}/plugins/themes/default/styles/images/banner.jpg" class="banner" style="width: 100%;">
 
 <div class="page_index_journal">
 

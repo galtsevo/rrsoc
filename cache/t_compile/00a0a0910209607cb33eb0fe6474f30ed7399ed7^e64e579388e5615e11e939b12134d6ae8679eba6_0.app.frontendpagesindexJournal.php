@@ -1,33 +1,36 @@
 <?php
-/* Smarty version 3.1.39, created on 2022-10-25 13:43:53
+/* Smarty version 3.1.39, created on 2022-10-26 02:25:50
   from 'app:frontendpagesindexJournal' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6357bde9d201f6_09391888',
+  'unifunc' => 'content_6358707e58d432_54139573',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e64e579388e5615e11e939b12134d6ae8679eba6' => 
     array (
       0 => 'app:frontendpagesindexJournal',
-      1 => 1666693551,
+      1 => 1666740271,
       2 => 'app',
     ),
   ),
   'includes' => 
   array (
-    'app:frontend/components/header.tpl' => 1,
+    'app:frontend/components/header_main.tpl' => 1,
     'app:frontend/objects/announcement_summary.tpl' => 1,
     'app:frontend/objects/issue_toc_main.tpl' => 1,
     'app:frontend/components/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6357bde9d201f6_09391888 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6358707e58d432_54139573 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\OpenServer\\domains\\localhost\\rrsoc\\lib\\pkp\\lib\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
-$_smarty_tpl->_subTemplateRender("app:frontend/components/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('pageTitleTranslated'=>$_smarty_tpl->tpl_vars['currentJournal']->value->getLocalizedName()), 0, false);
+$_smarty_tpl->_subTemplateRender("app:frontend/components/header_main.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('pageTitleTranslated'=>$_smarty_tpl->tpl_vars['currentJournal']->value->getLocalizedName()), 0, false);
 ?>
+
+<img src="<?php echo $_smarty_tpl->tpl_vars['baseUrl']->value;?>
+/plugins/themes/default/styles/images/banner.jpg" class="banner" style="width: 100%;">
 
 <div class="page_index_journal">
 

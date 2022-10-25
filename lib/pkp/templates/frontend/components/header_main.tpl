@@ -103,5 +103,5 @@
 			{assign var=hasSidebar value=0}
 		{/if}
 		<div class="pkp_structure_content{if $hasSidebar} has_sidebar{/if}">
-			<div class="pkp_structure_main" role="main">
+			<div class="pkp_structure_main_main" role="main">
 				<a id="pkp_content_main"></a>
