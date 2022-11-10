@@ -68,6 +68,7 @@ class FormComponent {
 	 * @return FormComponent
 	 */
 	public function addField($field, $position = []) {
+
 		if (empty($position)) {
 			$this->fields[] = $field;
 		} else {

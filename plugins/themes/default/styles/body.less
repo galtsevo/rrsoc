@@ -15,8 +15,28 @@ body {
 	line-height: @line-base;
 	color: @text;
 	background: @bg;
+	height: 1px;
 }
+#mydiv {
+	width: 690px;
+	height: 400px;
+	display: flex;
+	color: transparent;
+	background: url(http://localhost/rrsoc/plugins/themes/default/styles/images/forfooter.png) right bottom no-repeat;
+	background-size: 700px;
+	overflow: hidden;
+	position: relative;
+	left: auto;
+	margin-left: auto;
+	top: -400px;
 
+	@media( max-width: 992px ) {
+		display: none;
+	}
+}
+.inline_html_galley{
+	//font-family: Inter;
+}
 a {
 	color: @primary;
 
@@ -25,7 +45,13 @@ a {
 		color: @primary-lift;
 	}
 }
-
+.page_article{
+	background: #FFFFFF;
+	//padding: 20px;
+	@media( min-width: @screen-desktop ) {
+		padding: 20px;
+	}
+}
 
 // Page container widths
 .pkp_site_name_wrapper,
@@ -41,9 +67,15 @@ a {
 	padding-left: @base;
 	padding-right: @base;
 
+	//.container_art{
+	//	display: flex;
+	//	justify-content: center;
+	//}
 	@media( min-width: @screen-tablet ) {
-		width: @screen-tablet-container;
+		//width: @screen-tablet-container;
+		width: 100%;
 		padding: 0;
+
 	}
 
 	@media( min-width: @screen-desktop ) {
@@ -60,6 +92,23 @@ a {
 	.pkp_site_name,
 	.pkp_navigation_primary_wrapper {
 		width: auto;
+
+		display: flex;
+		justify-content: end;
+		gap: 30px;
+
+		@media( max-width: 992px ) {
+			justify-content: unset;
+		}
+
+		li {
+			display: inline; /* Отображать как строчный элемент */
+			text-decoration: none;
+			padding: 10px;
+			//margin-right: 5px; /* Отступ слева */
+			//border: 1px solid #000; /* Рамка вокруг текста */
+			//padding: 3px; /* Поля вокруг текста */
+		}
 	}
 
 	.pkp_head_wrapper {
@@ -93,7 +142,7 @@ a {
 @media( min-width: @screen-phone ) {
 
 	.pkp_structure_main {
-		padding: @double;
+		//padding: @double;
 	}
 }
 
@@ -125,8 +174,15 @@ a {
 		padding-top: @triple;
 
 		background: #f5f5f5;
-	}
 
+
+	}
+	.container_art{
+		display: flex;
+		//width: 80%;
+		margin-left: auto;
+		justify-content: center;
+	}
 	.pkp_structure_sidebar {
 		float: right;
 		width: @sidebar-width;
@@ -167,6 +223,7 @@ a {
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: @quadruple;
+		//display: flex;
 
 		// Aligns the left and right borders
 		@no-sidebar-margins: @sidebar-width / 2;

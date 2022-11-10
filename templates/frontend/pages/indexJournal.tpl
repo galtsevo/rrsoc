@@ -18,7 +18,23 @@
  *}
 {include file="frontend/components/header_main.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
-<img src="{$baseUrl}/plugins/themes/default/styles/images/banner.jpg" class="banner" style="width: 100%;">
+{*    		 Issue cover image*}
+{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
+{if $issueCover}
+	<div style='height:328px;  background: url({$issueCover|escape}) no-repeat center/100%; background-size: cover;'>
+        {*	<img src="{$baseUrl}/plugins/themes/default/styles/images/banner.bmp" class="banner" style="width: 100%;">*}
+		<div id="vipusk">{$issue->getIssueIdentification()}</div>
+	</div>
+
+{*	<a class="cover" href="{url op="view" page="issue" path=$issue->getBestIssueId()}">*}
+{*		{capture assign="defaultAltText"}*}
+{*			{translate key="issue.viewIssueIdentification" identification=$issue->getIssueIdentification()|escape}*}
+{*		{/capture}*}
+{*		<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:$defaultAltText}">*}
+{*	</a>*}
+{/if}
+
+
 
 <div class="page_index_journal">
 

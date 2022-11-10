@@ -82,7 +82,15 @@ class DataObject {
 	public function &getData($key, $locale = null) {
 		if (is_null($locale)) {
 			if (array_key_exists($key, $this->_data)) {
-				return $this->_data[$key];
+                //if($key == 'abstract'){
+                //    $aaa = substr($this->_data[$key], 0,-500);
+                    //$aaa = substr($this->_data[$key], 0, 80);
+                    //return $aaa;
+                //
+                //}else{
+                    return $this->_data[$key];
+                //}
+
 			}
 		} else {
 			// see http://bugs.php.net/bug.php?id=29848

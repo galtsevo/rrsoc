@@ -16,6 +16,7 @@
  * @uses $heading string HTML heading element, default: h2
  *}
 {assign var=articlePath value=$article->getBestId()}
+{*{$issue->getIssueIdentification()}*}
 {if !$heading}
 	{assign var="heading" value="h2"}
 {/if}
@@ -25,9 +26,9 @@
 {/if}
 
 {assign var=publication value=$article->getCurrentPublication()}
-<div class="obj_article_summary">
+<div class="obj_article_summary_main">
 	{if $publication->getLocalizedData('coverImage')}
-		<div class="cover">
+		<div class="cover_main">
 			<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if} class="file">
 				{assign var="coverImage" value=$article->getCurrentPublication()->getLocalizedData('coverImage')}
 				<img
@@ -36,6 +37,7 @@
 				>
 			</a>
 		</div>
+		<br>
 	{/if}
 
 	<{$heading} class="title">
@@ -77,25 +79,25 @@
 	</div>
 	{/if}
 
-	{if !$hideGalleys}
-		<ul class="galleys_links">
-			{foreach from=$article->getGalleys() item=galley}
-				{if $primaryGenreIds}
-					{assign var="file" value=$galley->getFile()}
-					{if !$galley->getRemoteUrl() && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
-						{continue}
-					{/if}
-				{/if}
-				<li>
-					{assign var="hasArticleAccess" value=$hasAccess}
-					{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $publication->getData('accessStatus') == $smarty.const.ARTICLE_ACCESS_OPEN}
-						{assign var="hasArticleAccess" value=1}
-					{/if}
-					{include file="frontend/objects/galley_link.tpl" parent=$article labelledBy="article-{$article->getId()}" hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
-				</li>
-			{/foreach}
-		</ul>
-	{/if}
+{*	{if !$hideGalleys}*}
+{*		<ul class="galleys_links">*}
+{*			{foreach from=$article->getGalleys() item=galley}*}
+{*				{if $primaryGenreIds}*}
+{*					{assign var="file" value=$galley->getFile()}*}
+{*					{if !$galley->getRemoteUrl() && !($file && in_array($file->getGenreId(), $primaryGenreIds))}*}
+{*						{continue}*}
+{*					{/if}*}
+{*				{/if}*}
+{*				<li>*}
+{*					{assign var="hasArticleAccess" value=$hasAccess}*}
+{*					{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $publication->getData('accessStatus') == $smarty.const.ARTICLE_ACCESS_OPEN}*}
+{*						{assign var="hasArticleAccess" value=1}*}
+{*					{/if}*}
+{*					{include file="frontend/objects/galley_link.tpl" parent=$article labelledBy="article-{$article->getId()}" hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}*}
+{*				</li>*}
+{*			{/foreach}*}
+{*		</ul>*}
+{*	{/if}*}
 
 	{call_hook name="Templates::Issue::Issue::Article"}
 </div>

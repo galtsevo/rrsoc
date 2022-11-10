@@ -219,6 +219,9 @@ msgstr "Подробности"
 msgid "article.abstract"
 msgstr "Аннотация"
 
+msgid "article.fulltext"
+msgstr "Полный текст статьи"
+
 msgid "article.coverPage.altText"
 msgstr "Изображение на обложке"
 
@@ -500,6 +503,9 @@ msgstr "Содержание"
 
 msgid "issue.abstract"
 msgstr "Аннотация"
+
+msgid "issue.fulltext"
+msgstr "Полный текст статьи"
 
 msgid "issue.coverPage.altText"
 msgstr "Обложка"

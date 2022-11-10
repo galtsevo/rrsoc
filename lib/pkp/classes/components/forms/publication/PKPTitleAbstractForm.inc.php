@@ -64,5 +64,10 @@ class PKPTitleAbstractForm extends FormComponent {
 				'isMultilingual' => true,
 				'value' => $publication->getData('abstract'),
 			]));
+            //->addField(new FieldRichTextarea('fulltext', [
+            //    'label' => __('common.fulltext'),
+            //    'isMultilingual' => true,
+            //    'value' => $publication->getData('fulltext'),
+            //]));
 	}
 }

@@ -100,6 +100,7 @@ class PKPSubmissionMetadataFormImplementation {
 				'prefix' => $publication->getData('prefix'),
 				'subtitle' => $publication->getData('subtitle'),
 				'abstract' => $publication->getData('abstract'),
+                'fulltext' => $publication->getData('fulltext'),
 				'coverage' => $publication->getData('coverage'),
 				'type' => $publication->getData('type'),
 				'source' =>$publication->getData('source'),
@@ -136,7 +137,7 @@ class PKPSubmissionMetadataFormImplementation {
 	 */
 	function readInputData() {
 		// 'keywords' is a tagit catchall that contains an array of values for each keyword/locale combination on the form.
-		$userVars = array('title', 'prefix', 'subtitle', 'abstract', 'coverage', 'type', 'source', 'rights', 'keywords', 'citationsRaw', 'locale');
+		$userVars = array('title', 'prefix', 'subtitle', 'abstract', 'fulltext', 'coverage', 'type', 'source', 'rights', 'keywords', 'citationsRaw', 'locale');
 		$this->_parentForm->readUserVars($userVars);
 	}
 
@@ -145,7 +146,7 @@ class PKPSubmissionMetadataFormImplementation {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'prefix', 'subtitle', 'abstract', 'coverage', 'type', 'source', 'rights');
+		return array('title', 'prefix', 'subtitle', 'abstract', 'fulltext', 'coverage', 'type', 'source', 'rights');
 	}
 
 	/**
@@ -173,6 +174,7 @@ class PKPSubmissionMetadataFormImplementation {
 			'prefix' => $this->_parentForm->getData('prefix'),
 			'subtitle' => $this->_parentForm->getData('subtitle'),
 			'abstract' => $this->_parentForm->getData('abstract'),
+            'fulltext' => $this->_parentForm->getData('fulltext'),
 			'coverage' => $this->_parentForm->getData('coverage'),
 			'type' => $this->_parentForm->getData('type'),
 			'rights' => $this->_parentForm->getData('rights'),

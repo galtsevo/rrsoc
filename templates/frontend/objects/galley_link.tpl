@@ -57,6 +57,15 @@
 	{/if}
 {/if}
 
+{if $galley->isMp3Galley()}
+{*{assign var="file" value=$galley->getData('urlPath')}*}
+	<audio controls>
+{*		<source src="https://rrsocialwork.ru/files/journals/1/articles/11/" type="audio/mpeg">*}
+		<source src="https://rrsocialwork.ru/files/journals/1/articles/11/636cf7439d0aa.mp3}" type="audio/mpeg">
+
+	</audio>
+{/if}
+
 {* Don't be frightened. This is just a link *}
 <a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$path}"{if $labelledBy} aria-labelledby={$labelledBy}{/if}>
 

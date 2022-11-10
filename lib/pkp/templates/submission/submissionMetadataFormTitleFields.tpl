@@ -31,3 +31,9 @@
 	{/if}
 	{fbvElement type="textarea" multilingual=true name="abstract" id="abstract" value=$abstract rich="extended" readonly=$readOnly wordCount=$wordCount}
 {/fbvFormSection}
+{*{fbvFormSection title="common.fulltext" for="fulltext" required=$fulltextRequired}*}
+{*	{if $wordCount}*}
+{*		<p class="pkp_help">{translate key="submission.abstract.wordCount.description" wordCount=$wordCount}*}
+{*	{/if}*}
+{*	{fbvElement type="textarea" multilingual=true name="fulltext" id="fulltext" value=$fulltext rich="extended" readonly=$readOnly wordCount=$wordCount}*}
+{*{/fbvFormSection}*}

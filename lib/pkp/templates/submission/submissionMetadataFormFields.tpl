@@ -18,7 +18,7 @@
 {if $coverageEnabled || $typeEnabled || $sourceEnabled || $rightsEnabled}
 	{fbvFormArea id="additionalDublinCore" title="submission.metadata"}
 		{fbvFormSection description="submission.metadataDescription"}
-			
+
 		{/fbvFormSection}
 		{if $coverageEnabled}
 			{fbvFormSection title="submission.coverage" for="coverage" required=$coverageRequired}

@@ -91,7 +91,7 @@
 {*					</div>*}
 				</nav>
 
-				<img src="{$baseUrl}/plugins/themes/default/styles/images/bsu_logo.png" class="bsu_logo" style="width: 170px;">
+{*				<img src="{$baseUrl}/plugins/themes/default/styles/images/bsu_logo.png" class="bsu_logo" style="/*width: 170px;*/ padding: 5px; display: block; max-width: 100%; width: auto; height: auto; max-height: 60px;">*}
 
 			</div><!-- .pkp_head_wrapper -->
 		</header><!-- .pkp_structure_head -->

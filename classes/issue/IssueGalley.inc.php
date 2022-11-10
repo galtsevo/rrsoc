@@ -41,6 +41,14 @@ class IssueGalley extends IssueFile {
 		}
 	}
 
+    function isMp3Galley() {
+        switch ($this->getFileType()) {
+            case 'application/mp3':
+                return true;
+            default: return false;
+        }
+    }
+
 	//
 	// Get/set methods
 	//

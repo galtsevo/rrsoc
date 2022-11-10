@@ -129,6 +129,14 @@ class ArticleGalley extends Representation {
 		return $this->getFileType() == 'application/pdf';
 	}
 
+    /**
+     * Determine whether the galley is a mp3.
+     * @return boolean
+     */
+    function isMp3Galley() {
+        return $this->getFileType() == 'application/mp3';
+    }
+
 	/**
 	 * Get the localized galley label.
 	 * @return string

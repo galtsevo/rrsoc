@@ -108,6 +108,9 @@ msgstr "Вы уверены, что хотите удалить этот эле�
 msgid "common.abstract"
 msgstr "Аннотация"
 
+msgid "common.fulltext"
+msgstr "Полный текст статьи"
+
 msgid "common.accepted"
 msgstr "Принято"
 
@@ -1479,6 +1482,9 @@ msgstr "По автору"
 
 msgid "search.abstract"
 msgstr "Аннотация"
+
+msgid "search.fulltext"
+msgstr "Полный текст статьи"
 
 msgid "search.advancedFilters"
 msgstr "Расширенные фильтры"

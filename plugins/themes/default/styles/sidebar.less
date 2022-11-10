@@ -10,9 +10,13 @@
  */
 
 .pkp_block {
-	padding: @triple @double;
+	//padding: @triple @double;
 	font-size: @font-base;
 	line-height: @line-base;
+
+	//border: solid 1px #dcb86d;
+	padding: unset !important;
+	//margin-top: 20px;
 
 	.title {
 		display: block;
@@ -23,8 +27,55 @@
 		font-weight: @bold;
 		line-height: @line-bump;
 		color: @text-light;
-	}
 
+		//border: solid 1px #dcb86d;
+		background: #dcb86d;
+		color: #FFFFFF;
+		text-align: center;
+
+		//.issue_button_statistic{
+		//	width: 30px;
+		//	vertical-align: middle;
+		//	border: 1px solid #dcb86d;
+		//	border-radius: 50%;
+		//	box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+		//	justify-self: end;
+		//}
+	}
+	.ya-share2__container.ya-share2__container_color-scheme_blackwhite .ya-share2__badge{
+		background-color: #dcb86d;
+	}
+	.ya-share2__container{
+		margin: 10px;
+		text-align: center;
+	}
+	.content_views{
+		background: #dcb86d;
+		color: #FFF;
+		text-align: center;
+		font-family: Inter;
+		padding: 5px;
+
+		.issue_button{
+			width: 30px;
+			vertical-align: middle;
+			border: 1px solid #dcb86d;
+			border-radius: 50%;
+			//box-shadow: 0 0 5px rgba(0,0,0,0.3);
+			justify-self: end;
+		}
+		a{
+			color: #FFFFFF;
+		}
+
+	}
+	.content_views:hover{
+		background: #fff !important;
+		color: #dcb86d !important;
+		a{
+			color: #dcb86d;
+		}
+	}
 	.content {
 
 		 ul {

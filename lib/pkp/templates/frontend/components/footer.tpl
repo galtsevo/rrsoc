@@ -25,9 +25,9 @@
 	{/if}
 </div><!-- pkp_structure_content -->
 
+
 <div class="pkp_structure_footer_wrapper" role="contentinfo">
 	<a id="pkp_content_footer"></a>
-
 	<div class="pkp_structure_footer">
 
 		{if $pageFooter}
@@ -36,18 +36,24 @@
 			</div>
 		{/if}
 
-		<div class="pkp_brand_footer" role="complementary">
+{*		<div class="pkp_brand_footer" role="complementary">*}
 {*			<a href="{url page="about" op="aboutThisPublishingSystem"}">*}
 {*				<img alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">*}
 {*			</a>*}
-		</div>
+{*		</div>*}
+
 	</div>
+
 </div><!-- pkp_structure_footer_wrapper -->
+{*	<div>*}
+{*<img src="{$baseUrl}/plugins/themes/default/styles/images/forfooter.png" class="banner" style="width: 100%;">*}
+{*	</div>*}
 
 </div><!-- pkp_structure_page -->
 
 {load_script context="frontend"}
 
 {call_hook name="Templates::Common::Footer::PageFooter"}
+<div id="mydiv"></div>
 </body>
 </html>

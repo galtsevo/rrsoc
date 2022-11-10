@@ -20,7 +20,20 @@
 			width: auto;
 		}
 	}
+	.cover_main {
+		display: block;
+		margin-bottom: @double;
 
+		img {
+			//display: block;
+			//max-height: 250px;
+			width: 100%;
+		}
+		img:hover {
+			opacity: 0.4;
+			width: 100%;
+		}
+	}
 	.description {
 
 		> *:first-child {
@@ -50,23 +63,23 @@
 
 	.articles_main {
 		&:extend(.pkp_unstyled_list);
-
 		// Prevent articles from moving up into section divider
 		// if the title of a section is omitted from the table of contents
-		margin-top: calc(~"@{triple} + @{double}");
-
+		//margin-top: calc(~"@{triple} + @{double}");
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
 		//outline: 2px dashed #ccc;
-
 		flex: 1;
 		min-width: 0;
-		display: flex;
+		//display: flex;
 		flex-direction: column;
+		text-align: center;
+		max-width: 1830px;
+
 	}
 	.articles_main:first-child > :last-child, .articles_main:last-child > :first-child {
-		flex-grow: 2;
+		//flex-grow: 2;
 	}
 	h2 + .articles,
 	h3 + .articles {
@@ -75,6 +88,7 @@
 
 	.sections:not(:first-child) {
 		margin-top: @triple * 2;
+		margin-top: 0;
 	}
 
 	.section_main:last-child .articles > li:last-child {
@@ -95,8 +109,29 @@
 		}
 	}
 
+	@media(max-width: 992px) {
+
+		.articles_main {
+			&:extend(.pkp_unstyled_list);
+			flex-direction: row;
+			justify-content: space-around;
+		}
+	}
+	@media(max-width: 768px) {
+		.galleys,
+		.section_main {
+			position: relative;
+			margin: @triple -@double;
+			padding: @triple;
+		}
+	}
 	@media(min-width: @screen-tablet) {
 
+		//.articles_main {
+		//	&:extend(.pkp_unstyled_list);
+		//	flex-direction: row;
+		//	justify-content: space-around;
+		//}
 		.heading {
 			.pkp_helpers_clear;
 		}
@@ -140,14 +175,27 @@
 		}
 	}
 
+	@media(max-width: 1440px) {
+		.articles_main {
+			&:extend(.pkp_unstyled_list);
+			max-width: 1200px;
+		}
+	}
 	@media(min-width: @screen-desktop) {
+		//.articles_main {
+		//	&:extend(.pkp_unstyled_list);
+		//	max-width: 1200px;
+		//}
 
 		.galleys,
 		.section_main {
 			margin: @triple -@triple;
+			margin: unset;
 
 			display: flex;
-			height: 500px;
+			//height: 500px;
+			height: 1800px;
+			justify-content: center;
 		}
 
 		.cover {

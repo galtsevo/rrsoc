@@ -137,6 +137,7 @@ class CompositeFilter extends PersistableFilter {
 	function getSettingsMappingForSetting($settingName) {
 		$settingsMapping = array();
 		$settingsMappingData = $this->getData('settingsMapping');
+        var_dump($settingsMappingData);
 		if (isset($settingsMappingData[$settingName])) {
 			$settingsMapping = $settingsMappingData[$settingName];
 		}
